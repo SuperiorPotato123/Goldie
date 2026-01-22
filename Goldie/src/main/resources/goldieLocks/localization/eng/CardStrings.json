@@ -19,5 +19,11 @@
       "If you need to use it for stuff.",
       "Blizzard is a good example for this."
     ]
+  },
+
+  "${modID}:customize": {
+    "NAME": "Customize",
+    "DESCRIPTION": "Lose 2 gold and gain 1 strength",
+    "UPGRADE_DESCRIPTION": "Lose 4 gold and gain 2 strength"
   }
 }

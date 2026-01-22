@@ -457,7 +457,7 @@ public abstract class BaseCard extends CustomCard {
             {
                 if (cardStrings.UPGRADE_DESCRIPTION == null)
                 {
-                    BasicMod.logger.error("Card " + cardID + " upgrades description and has null upgrade description.");
+                    BasicMod.logger.error("Card " + cardID + " upgrades description and has null customize description.");
                 }
                 else
                 {
@@ -468,7 +468,7 @@ public abstract class BaseCard extends CustomCard {
             if (upgradeCost)
             {
                 if (isCostModified && this.cost < this.baseCost && this.cost >= 0) {
-                    int diff = this.costUpgrade - this.baseCost; //how the upgrade alters cost
+                    int diff = this.costUpgrade - this.baseCost; //how the customize alters cost
                     this.upgradeBaseCost(this.cost + diff);
                     if (this.cost < 0)
                         this.cost = 0;

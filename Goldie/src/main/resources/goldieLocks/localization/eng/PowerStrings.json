@@ -4,5 +4,12 @@
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
+  },
+
+  "${modID}:bloodMoneyPower": {
+    "NAME": "Blood Money",
+    "DESCRIPTIONS": [
+      "Gain gold everytime you are dealt damage"
+    ]
   }
 }
