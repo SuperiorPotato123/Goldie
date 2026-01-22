@@ -1,12 +1,14 @@
-package basicmod;
+package goldieLocks;
 
+import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
-import basicmod.character.MyCharacter;
-import basicmod.util.GeneralUtils;
-import basicmod.util.KeywordInfo;
-import basicmod.util.Sounds;
-import basicmod.util.TextureLoader;
+import goldieLocks.cards.BaseCard;
+import goldieLocks.character.MyCharacter;
+import goldieLocks.util.GeneralUtils;
+import goldieLocks.util.KeywordInfo;
+import goldieLocks.util.Sounds;
+import goldieLocks.util.TextureLoader;
 import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglFileHandle;
@@ -31,6 +33,7 @@ import java.util.*;
 
 @SpireInitializer
 public class BasicMod implements
+        EditCardsSubscriber,
         EditCharactersSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
@@ -58,6 +61,14 @@ public class BasicMod implements
     public BasicMod() {
         BaseMod.subscribe(this); //This will make BaseMod trigger all the subscribers at their appropriate times.
         logger.info(modID + " subscribed to BaseMod.");
+    }
+
+    @Override
+    public void receiveEditCards() { //somewhere in the class
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(BaseCard.class) //In the same package as this class
+                .setDefaultSeen(true) //And marks them as seen in the compendium
+                .cards(); //Adds the cards
     }
 
     @Override

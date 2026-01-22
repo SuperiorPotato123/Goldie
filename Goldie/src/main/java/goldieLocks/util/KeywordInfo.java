@@ -1,4 +1,4 @@
-package basicmod.util;
+package goldieLocks.util;
 
 import basemod.helpers.KeywordColorInfo;
 

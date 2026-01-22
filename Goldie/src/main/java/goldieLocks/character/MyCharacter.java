@@ -1,4 +1,4 @@
-package basicmod.character;
+package goldieLocks.character;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
@@ -22,11 +22,12 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.relics.BurningBlood;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import goldieLocks.cards.costEffective;
 
 import java.util.ArrayList;
 
-import static basicmod.BasicMod.characterPath;
-import static basicmod.BasicMod.makeID;
+import static goldieLocks.BasicMod.characterPath;
+import static goldieLocks.BasicMod.makeID;
 
 public class MyCharacter extends CustomPlayer {
     //Stats
@@ -143,7 +144,7 @@ public class MyCharacter extends CustomPlayer {
         retVal.add(Strike_Red.ID);
         retVal.add(Defend_Blue.ID);
         retVal.add(Defend_Blue.ID);
-        retVal.add(Neutralize.ID);
+        retVal.add(costEffective.ID);
 
         return retVal;
     }
