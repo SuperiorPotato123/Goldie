@@ -19,7 +19,7 @@ public class bloodMoney extends BaseCard{
             CardType.SKILL,
             CardRarity.RARE,
             CardTarget.SELF,
-            1
+            3
     );
 
     public bloodMoney() {
@@ -30,6 +30,7 @@ public class bloodMoney extends BaseCard{
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeBaseCost(2);
         }
     }
 
