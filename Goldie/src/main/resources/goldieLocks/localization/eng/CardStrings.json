@@ -44,5 +44,11 @@
     "NAME": "Pulverize",
     "DESCRIPTION": "Deal 8 Damage, Gain 2 Gold",
     "UPGRADE_DESCRIPTION": "Deal 11 Damage, Gain 2 Gold"
+  },
+
+  "${modID}:Inheritence": {
+    "NAME": "Inheritence",
+    "DESCRIPTION": "At the start of your turn gain 1 Gold",
+    "UPGRADE_DESCRIPTION": "At the start of your turn gain 2 Gold"
   }
 }
