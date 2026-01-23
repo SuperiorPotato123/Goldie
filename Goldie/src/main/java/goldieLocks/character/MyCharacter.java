@@ -9,6 +9,9 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
@@ -16,11 +19,16 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.BurningBlood;
+import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.ui.FtueTip;
+import com.megacrit.cardcrawl.ui.MultiPageFtue;
 import goldieLocks.cards.Repulsor;
 
 import java.util.ArrayList;
@@ -35,6 +43,8 @@ public class MyCharacter extends CustomPlayer {
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
+    public static int GOLD_GAINED_THIS_COMBAT = 0;
+
 
     //Strings
     private static final String ID = makeID("CharacterID"); //This should match whatever you have in the CharacterStrings.json file
@@ -258,4 +268,52 @@ public class MyCharacter extends CustomPlayer {
         //Makes a new instance of your character class.
         return new MyCharacter();
     }
+
+    @Override
+    public void preBattlePrep() {
+        if (!((Boolean) TipTracker.tips.get("COMBAT_TIP")).booleanValue()) {
+            AbstractDungeon.ftue = (FtueTip)new MultiPageFtue();
+            TipTracker.neverShowAgain("COMBAT_TIP");
+        }
+        AbstractDungeon.actionManager.clear();
+        this.damagedThisCombat = 0;
+        this.cardsPlayedThisTurn = 0;
+        this.maxOrbs = 0;
+        this.orbs.clear();
+        increaseMaxOrbSlots(this.masterMaxOrbs, false);
+        this.isBloodied = (this.currentHealth <= this.maxHealth / 2);
+        poisonKillCount = 0;
+        GameActionManager.playerHpLastTurn = this.currentHealth;
+        this.endTurnQueued = false;
+        this.gameHandSize = this.masterHandSize;
+        this.isDraggingCard = false;
+        this.isHoveringDropZone = false;
+        this.hoveredCard = null;
+        this.cardInUse = null;
+        this.drawPile.initializeDeck(this.masterDeck);
+        AbstractDungeon.overlayMenu.endTurnButton.enabled = false;
+        this.hand.clear();
+        this.discardPile.clear();
+        this.exhaustPile.clear();
+        if (AbstractDungeon.player.hasRelic("SlaversCollar"))
+            ((SlaversCollar)AbstractDungeon.player.getRelic("SlaversCollar")).beforeEnergyPrep();
+        this.energy.prep();
+        this.powers.clear();
+        this.isEndingTurn = false;
+        healthBarUpdatedEvent();
+        if (ModHelper.isModEnabled("Lethality"))
+            AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction(this, this, (AbstractPower)new StrengthPower(this, 3), 3));
+        if (ModHelper.isModEnabled("Terminal"))
+            AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new ApplyPowerAction(this, this, (AbstractPower)new PlatedArmorPower(this, 5), 5));
+        (AbstractDungeon.getCurrRoom()).monsters.usePreBattleAction();
+        if (Settings.isFinalActAvailable && (AbstractDungeon.getCurrMapNode()).hasEmeraldKey)
+            AbstractDungeon.getCurrRoom().applyEmeraldEliteBuff();
+        AbstractDungeon.actionManager.addToTop((AbstractGameAction)new WaitAction(1.0F));
+        applyPreCombatLogic();
+
+        // Section being added
+        this.GOLD_GAINED_THIS_COMBAT = 0;
+    }
+
+
 }

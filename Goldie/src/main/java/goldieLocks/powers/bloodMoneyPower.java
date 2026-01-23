@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import goldieLocks.character.GainGoldActionExtra;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
@@ -24,7 +25,7 @@ public class bloodMoneyPower extends BasePower {
     }
 
     public void wasHPLost(DamageInfo info, int damageAmount) {
-        this.owner.gainGold(damageAmount);
+        addToBot(new GainGoldActionExtra(damageAmount, this.owner));
     }
 
     public void updateDescription() {

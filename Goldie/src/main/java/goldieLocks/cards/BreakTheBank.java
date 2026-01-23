@@ -7,17 +7,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import goldieLocks.character.GainGoldActionExtra;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class Pulverize extends BaseCard{
+public class BreakTheBank extends BaseCard{
 
-    public static final String ID = makeID(Pulverize.class.getSimpleName());
+    public static final String ID = makeID(BreakTheBank.class.getSimpleName());
 
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 3;
-    private static final int MAGIC = 2;
 
 
 
@@ -29,23 +25,25 @@ public class Pulverize extends BaseCard{
             1
     );
 
-    public Pulverize() {
+    public BreakTheBank() {
         super(ID, info);
+    }
 
-        setDamage(DAMAGE, UPG_DAMAGE);
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeBaseCost(1);
+        }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainGoldActionExtra(magicNumber, p));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        addToBot(new DamageAction(m, new DamageInfo(p, MyCharacter.GOLD_GAINED_THIS_COMBAT, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Pulverize();
+        return new BreakTheBank();
     }
 }
