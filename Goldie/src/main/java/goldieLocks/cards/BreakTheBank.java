@@ -20,9 +20,9 @@ public class BreakTheBank extends BaseCard{
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.COMMON,
+            CardRarity.RARE,
             CardTarget.ENEMY,
-            1
+            2
     );
 
     public BreakTheBank() {
