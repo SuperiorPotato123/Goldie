@@ -32,5 +32,11 @@
     "NAME": "Charisma",
     "DESCRIPTION": "If the enemy does not intend to attack, gain 5 gold.",
     "UPGRADE_DESCRIPTION": "If the enemy does not intend to attack, gain 7 gold."
+  },
+
+  "${modID}:repulsor": {
+    "NAME": "Repulsor",
+    "DESCRIPTION": "Pay 2 Gold, Deal 6 Damage",
+    "UPGRADE_DESCRIPTION": "Pay 2 Gold, Deal 8 Damage"
   }
 }
