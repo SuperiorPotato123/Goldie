@@ -11,5 +11,13 @@
     "DESCRIPTIONS": [
       "Gain gold everytime you are dealt damage"
     ]
+  },
+
+  "${modID}:inheritencePower": {
+    "NAME": "Inheritence",
+    "DESCRIPTIONS": [
+      "At the beginning of your turn gain #b",
+      " gold."
+    ]
   }
 }

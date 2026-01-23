@@ -60,6 +60,11 @@
   "${modID}:HeroicLanding": {
     "NAME": "Heroic Landing",
     "DESCRIPTION": "Innate NL Apply !M! weak and !M! vulnerable to ALL enemies NL Exhaust"
+  },
 
+  "${modID}:EnergyBeam": {
+    "NAME": "Energy Beam",
+    "DESCRIPTION": "Deal !D! Damage NL ${modID}:Surplus NL Deal !M! to two random enemies"
   }
+
 }
