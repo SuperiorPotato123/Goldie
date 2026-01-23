@@ -38,5 +38,11 @@
     "NAME": "Repulsor",
     "DESCRIPTION": "Pay 2 Gold, Deal 6 Damage",
     "UPGRADE_DESCRIPTION": "Pay 2 Gold, Deal 8 Damage"
+  },
+
+  "${modID}:Pulverize": {
+    "NAME": "Pulverize",
+    "DESCRIPTION": "Deal 8 Damage, Gain 2 Gold",
+    "UPGRADE_DESCRIPTION": "Deal 11 Damage, Gain 2 Gold"
   }
 }
