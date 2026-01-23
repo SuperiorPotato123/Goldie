@@ -55,5 +55,11 @@
     "NAME": "Inheritence",
     "DESCRIPTION": "At the start of your turn gain 1 Gold",
     "UPGRADE_DESCRIPTION": "At the start of your turn gain 2 Gold"
+  },
+
+  "${modID}:HeroicLanding": {
+    "NAME": "Heroic Landing",
+    "DESCRIPTION": "Innate NL Apply !M! weak and !M! vulnerable to ALL enemies NL Exhaust"
+
   }
 }
