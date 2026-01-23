@@ -10,31 +10,31 @@
     ]
   },
 
-  "${modID}:costEffective": {
+  "${modID}:CostEffective": {
     "NAME": "Cost Effective",
     "DESCRIPTION": "Gain 6 Block, Gain 2 Gold",
     "UPGRADE_DESCRIPTION": "Gain 8 Block, Gain 2 Gold"
   },
 
-  "${modID}:customize": {
+  "${modID}:Customize": {
     "NAME": "Customize",
     "DESCRIPTION": "Lose 2 Gold, Gain 1 Strength",
     "UPGRADE_DESCRIPTION": "Lose 4 Gold, Gain 2 Strength"
   },
 
-  "${modID}:bloodMoney": {
+  "${modID}:BloodMoney": {
     "NAME": "Blood Money",
     "DESCRIPTION": "Whenever you lose HP, gain that much gold.",
     "UPGRADE_DESCRIPTION": "Whenever you lose HP, gain that much gold."
   },
 
-  "${modID}:charisma": {
+  "${modID}:Charisma": {
     "NAME": "Charisma",
     "DESCRIPTION": "If the enemy does not intend to attack, gain 5 gold.",
     "UPGRADE_DESCRIPTION": "If the enemy does not intend to attack, gain 7 gold."
   },
 
-  "${modID}:repulsor": {
+  "${modID}:Repulsor": {
     "NAME": "Repulsor",
     "DESCRIPTION": "Pay 2 Gold, Deal 6 Damage",
     "UPGRADE_DESCRIPTION": "Pay 2 Gold, Deal 8 Damage"

@@ -1,20 +1,17 @@
 package goldieLocks.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class repulsor extends BaseCard{
+public class Repulsor extends BaseCard{
 
-    public static final String ID = makeID(repulsor.class.getSimpleName());
+    public static final String ID = makeID(Repulsor.class.getSimpleName());
 
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
@@ -29,7 +26,7 @@ public class repulsor extends BaseCard{
             0
     );
 
-    public repulsor() {
+    public Repulsor() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
@@ -53,6 +50,6 @@ public class repulsor extends BaseCard{
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new repulsor();
+        return new Repulsor();
     }
 }

@@ -1,46 +1,43 @@
 package goldieLocks.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import goldieLocks.character.MyCharacter;
-import goldieLocks.powers.bloodMoneyPower;
 import goldieLocks.util.CardStats;
 
-public class bloodMoney extends BaseCard{
+public class CostEffective extends BaseCard{
 
-    public static final String ID = makeID(bloodMoney.class.getSimpleName());
+    public static final String ID = makeID(CostEffective.class.getSimpleName());
+
+    private static final int BLOCK = 6;
+    private static final int UPG_BLOCK = 2;
 
 
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.RARE,
+            CardRarity.COMMON,
             CardTarget.SELF,
-            3
+            1
     );
 
-    public bloodMoney() {
+    public CostEffective() {
         super(ID, info);
 
-    }
-
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            upgradeBaseCost(2);
-        }
+        setBlock(BLOCK, UPG_BLOCK);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new bloodMoneyPower(p, 1)));
+        addToBot(new GainBlockAction(p, p, this.block));
+        addToBot(new GainGoldAction(2));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new bloodMoney();
+        return new CostEffective();
     }
 }
