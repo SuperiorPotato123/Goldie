@@ -12,18 +12,25 @@
 
   "${modID}:costEffective": {
     "NAME": "Cost Effective",
-    "DESCRIPTION": "Gain 6 Block and 2 Gold",
-    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
-    "EXTENDED_DESCRIPTION": [
-      "You can put more text in here.",
-      "If you need to use it for stuff.",
-      "Blizzard is a good example for this."
-    ]
+    "DESCRIPTION": "Gain 6 Block, Gain 2 Gold",
+    "UPGRADE_DESCRIPTION": "Gain 8 Block, Gain 2 Gold"
   },
 
   "${modID}:customize": {
     "NAME": "Customize",
-    "DESCRIPTION": "Lose 2 gold and gain 1 strength",
-    "UPGRADE_DESCRIPTION": "Lose 4 gold and gain 2 strength"
+    "DESCRIPTION": "Lose 2 Gold, Gain 1 Strength",
+    "UPGRADE_DESCRIPTION": "Lose 4 Gold, Gain 2 Strength"
+  },
+
+  "${modID}:bloodMoney": {
+    "NAME": "Blood Money",
+    "DESCRIPTION": "Whenever you lose HP, gain that much gold.",
+    "UPGRADE_DESCRIPTION": "Whenever you lose HP, gain that much gold."
+  },
+
+  "${modID}:charisma": {
+    "NAME": "Charisma",
+    "DESCRIPTION": "If the enemy does not intend to attack, gain 5 gold.",
+    "UPGRADE_DESCRIPTION": "If the enemy does not intend to attack, gain 7 gold."
   }
 }
