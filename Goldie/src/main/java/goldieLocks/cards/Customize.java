@@ -12,9 +12,6 @@ public class Customize extends BaseCard{
 
     public static final String ID = makeID(Customize.class.getSimpleName());
 
-    private static final int BLOCK = 6;
-    private static final int UPG_BLOCK = 2;
-
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
             CardType.SKILL,

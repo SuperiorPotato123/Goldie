@@ -15,7 +15,7 @@ public class BloodMoney extends BaseCard{
 
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
-            CardType.SKILL,
+            CardType.POWER,
             CardRarity.RARE,
             CardTarget.SELF,
             3
