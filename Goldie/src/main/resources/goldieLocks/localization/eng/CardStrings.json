@@ -48,8 +48,7 @@
 
   "${modID}:BreakTheBank": {
     "NAME": "Break The Bank",
-    "DESCRIPTION": "Deal Damage Equal to the Amount of Gold you've gained this combat",
-    "UPGRADE_DESCRIPTION": "At the start of your turn gain 2 Gold"
+    "DESCRIPTION": "Deal Damage Equal to the Amount of Gold you've gained this combat (!D!)"
   },
 
   "${modID}:Inheritence": {
