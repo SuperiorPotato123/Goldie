@@ -65,6 +65,11 @@
   "${modID}:EnergyBeam": {
     "NAME": "Energy Beam",
     "DESCRIPTION": "Deal !D! Damage NL ${modID}:Surplus NL Deal !M! to two random enemies"
+  },
+
+  "${modID}:SpareCannon": {
+    "NAME": "Spare Cannon",
+    "DESCRIPTION": "Deal !D! Damage NL ${modID}:Surplus NL put this card on the top of your library"
   }
 
 }

@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class EnergyBeam extends BaseCard{
+public class SpareCannon extends BaseCard{
 
-    public static final String ID = makeID(EnergyBeam.class.getSimpleName());
+    public static final String ID = makeID(SpareCannon.class.getSimpleName());
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 3;
 
 
 
@@ -27,12 +27,10 @@ public class EnergyBeam extends BaseCard{
             1
     );
 
-    public EnergyBeam() {
+    public SpareCannon() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
-        this.baseMagicNumber = 3;
-        this.magicNumber = this.baseMagicNumber;
     }
 
     public void upgrade() {
@@ -52,16 +50,12 @@ public class EnergyBeam extends BaseCard{
     public void triggerOnEndOfPlayerTurn() {
         // Surplus effect
         if(AbstractDungeon.player.energy.energy > 0) {
-            AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-            if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, magicNumber, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-
-            randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-            if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, magicNumber, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            AbstractDungeon.player.hand.moveToDeck(this, false);
         }
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new EnergyBeam();
+        return new SpareCannon();
     }
 }
