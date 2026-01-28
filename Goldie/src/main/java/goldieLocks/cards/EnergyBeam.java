@@ -33,6 +33,7 @@ public class EnergyBeam extends BaseCard{
         setDamage(DAMAGE, UPG_DAMAGE);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        setCustomVar("damage2", VariableType.DAMAGE, 3, 1);
     }
 
     public void upgrade() {
@@ -53,10 +54,12 @@ public class EnergyBeam extends BaseCard{
         // Surplus effect
         if(AbstractDungeon.player.energy.energy > 0) {
             AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-            if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, magicNumber, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            calculateCardDamage(randomMonster);
+            if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, customVar("damage2"), this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
             randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-            if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, magicNumber, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            calculateCardDamage(randomMonster);
+            if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, customVar("damage2"), this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
     }
 

@@ -64,7 +64,7 @@
 
   "${modID}:EnergyBeam": {
     "NAME": "Energy Beam",
-    "DESCRIPTION": "Deal !D! Damage NL ${modID}:Surplus NL Deal !M! to two random enemies"
+    "DESCRIPTION": "Deal !D! Damage NL ${modID}:Surplus NL Deal !${modID}:damage2! to two random enemies"
   },
 
   "${modID}:SpareCannon": {
