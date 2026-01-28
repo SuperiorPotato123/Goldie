@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import goldieLocks.character.MyCharacter;
-import goldieLocks.powers.bloodMoneyPower;
+import goldieLocks.powers.BloodMoneyPower;
 import goldieLocks.util.CardStats;
 
 public class BloodMoney extends BaseCard{
@@ -35,7 +35,7 @@ public class BloodMoney extends BaseCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new bloodMoneyPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new BloodMoneyPower(p, 1)));
     }
 
     @Override

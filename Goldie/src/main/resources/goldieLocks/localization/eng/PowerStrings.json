@@ -6,14 +6,14 @@
     ]
   },
 
-  "${modID}:bloodMoneyPower": {
+  "${modID}:BloodMoneyPower": {
     "NAME": "Blood Money",
     "DESCRIPTIONS": [
       "Gain gold everytime you are dealt damage"
     ]
   },
 
-  "${modID}:inheritencePower": {
+  "${modID}:InheritencePower": {
     "NAME": "Inheritence",
     "DESCRIPTIONS": [
       "At the beginning of your turn gain #b",
