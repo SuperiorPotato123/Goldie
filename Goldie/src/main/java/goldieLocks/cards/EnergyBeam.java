@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
@@ -31,16 +32,16 @@ public class EnergyBeam extends BaseCard{
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
-        this.baseMagicNumber = 3;
-        this.magicNumber = this.baseMagicNumber;
+
         setCustomVar("damage2", VariableType.DAMAGE, 3, 1);
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+
             upgradeDamage(2);
+            upgradeCustomVar("damage2");
         }
     }
 
@@ -52,7 +53,7 @@ public class EnergyBeam extends BaseCard{
     @Override
     public void triggerOnEndOfPlayerTurn() {
         // Surplus effect
-        if(AbstractDungeon.player.energy.energy > 0) {
+        if(EnergyPanel.totalCount > 0) {
             AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
             calculateCardDamage(randomMonster);
             if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, customVar("damage2"), this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));

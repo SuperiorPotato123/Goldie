@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
@@ -49,7 +50,7 @@ public class SpareCannon extends BaseCard{
     @Override
     public void triggerOnEndOfPlayerTurn() {
         // Surplus effect
-        if(AbstractDungeon.player.energy.energy > 0) {
+        if(EnergyPanel.totalCount > 0) {
             AbstractDungeon.player.hand.moveToDeck(this, false);
         }
     }
