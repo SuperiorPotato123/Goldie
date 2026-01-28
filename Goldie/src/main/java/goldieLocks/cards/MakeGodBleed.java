@@ -1,19 +1,22 @@
 package goldieLocks.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class Repulsor extends BaseCard{
+public class MakeGodBleed extends BaseCard{
 
-    public static final String ID = makeID(Repulsor.class.getSimpleName());
+    public static final String ID = makeID(MakeGodBleed.class.getSimpleName());
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 2;
 
 
@@ -21,35 +24,37 @@ public class Repulsor extends BaseCard{
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
-            CardRarity.BASIC,
+            CardRarity.COMMON,
             CardTarget.ENEMY,
-            0
+            2
     );
 
-    public Repulsor() {
+    public MakeGodBleed() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(p.gold > 1){
-            p.loseGold(2);
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        }
+        m.addPower(new VulnerablePower(m, 1, false));
+        calculateCardDamage(m);
+        //addToTop(new ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Repulsor();
+        return new MakeGodBleed();
     }
 }
