@@ -31,6 +31,15 @@ public class QuickThinking extends BaseCard{
     public QuickThinking() {
         super(ID, info);
 
+        this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber;
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeMagicNumber(1);
+        }
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
@@ -47,7 +56,7 @@ public class QuickThinking extends BaseCard{
         // Surplus effect
         if(EnergyPanel.totalCount > 0) {
             AbstractPlayer p = AbstractDungeon.player;
-            addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, 2), 2));
+            addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, magicNumber), magicNumber));
         }
     }
 
