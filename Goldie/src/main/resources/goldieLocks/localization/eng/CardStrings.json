@@ -70,6 +70,11 @@
   "${modID}:SpareCannon": {
     "NAME": "Spare Cannon",
     "DESCRIPTION": "Deal !D! Damage NL ${modID}:Surplus NL put this card on the top of your library"
+  },
+
+  "${modID}:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "Gain !B! Block, Draw !M! cards"
   }
 
 }
