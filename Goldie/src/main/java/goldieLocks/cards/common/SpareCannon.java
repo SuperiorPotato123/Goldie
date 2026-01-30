@@ -1,4 +1,4 @@
-package goldieLocks.cards;
+package goldieLocks.cards.common;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -8,15 +8,16 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class EnergyBeam extends BaseCard{
+public class SpareCannon extends BaseCard {
 
-    public static final String ID = makeID(EnergyBeam.class.getSimpleName());
+    public static final String ID = makeID(SpareCannon.class.getSimpleName());
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 3;
 
 
 
@@ -28,20 +29,17 @@ public class EnergyBeam extends BaseCard{
             1
     );
 
-    public EnergyBeam() {
+    public SpareCannon() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
-
-        setCustomVar("damage2", VariableType.DAMAGE, 3, 1);
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
+            upgradeMagicNumber(1);
             upgradeDamage(2);
-            upgradeCustomVar("damage2");
         }
     }
 
@@ -54,18 +52,12 @@ public class EnergyBeam extends BaseCard{
     public void triggerOnEndOfPlayerTurn() {
         // Surplus effect
         if(EnergyPanel.totalCount > 0) {
-            AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-            calculateCardDamage(randomMonster);
-            if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, customVar("damage2"), this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-
-            randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-            calculateCardDamage(randomMonster);
-            if(randomMonster != null) addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, customVar("damage2"), this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            AbstractDungeon.player.hand.moveToDeck(this, false);
         }
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new EnergyBeam();
+        return new SpareCannon();
     }
 }

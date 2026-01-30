@@ -1,54 +1,50 @@
-package goldieLocks.cards;
+package goldieLocks.cards.uncommon;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import goldieLocks.cards.BaseCard;
 import goldieLocks.character.GainGoldActionExtra;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class Villianize extends BaseCard{
+public class Charisma extends BaseCard {
 
-    public static final String ID = makeID(Villianize.class.getSimpleName());
-
-
-
+    public static final String ID = makeID(Charisma.class.getSimpleName());
 
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             CardTarget.ENEMY,
             1
     );
 
-    public Villianize() {
+    public Charisma() {
         super(ID, info);
 
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(2);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-            addToBot(new GainGoldActionExtra(1, p));
+        if(m !=null && m.intent != AbstractMonster.Intent.ATTACK && m.intent != AbstractMonster.Intent.ATTACK_BUFF && m.intent != AbstractMonster.Intent.ATTACK_DEBUFF
+        && m.intent != AbstractMonster.Intent.ATTACK_DEFEND) {
+            addToBot(new GainGoldActionExtra(magicNumber, p));
+        }
+
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Villianize();
+        return new Charisma();
     }
 }

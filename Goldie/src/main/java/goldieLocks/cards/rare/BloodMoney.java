@@ -1,47 +1,46 @@
-package goldieLocks.cards;
+package goldieLocks.cards.rare;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
+import goldieLocks.powers.BloodMoneyPower;
 import goldieLocks.util.CardStats;
 
-public class Customize extends BaseCard{
+public class BloodMoney extends BaseCard {
 
-    public static final String ID = makeID(Customize.class.getSimpleName());
+    public static final String ID = makeID(BloodMoney.class.getSimpleName());
+
 
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
-            CardType.SKILL,
-            CardRarity.COMMON,
+            CardType.POWER,
+            CardRarity.RARE,
             CardTarget.SELF,
-            1
+            3
     );
 
-    public Customize() {
+    public BloodMoney() {
         super(ID, info);
 
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeBaseCost(2);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber/2)));
-        p.loseGold(2);
+        addToBot(new ApplyPowerAction(p, p, new BloodMoneyPower(p, 1)));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Customize();
+        return new BloodMoney();
     }
 }

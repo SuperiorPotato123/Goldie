@@ -1,17 +1,17 @@
-package goldieLocks.cards;
+package goldieLocks.cards.common;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class Reserve extends BaseCard{
+public class Reserve extends BaseCard {
 
     public static final String ID = makeID(Reserve.class.getSimpleName());
 

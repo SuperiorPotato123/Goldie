@@ -1,16 +1,16 @@
-package goldieLocks.cards;
+package goldieLocks.cards.rare;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class BreakTheBank extends BaseCard{
+public class BreakTheBank extends BaseCard {
 
     public static final String ID = makeID(BreakTheBank.class.getSimpleName());
 

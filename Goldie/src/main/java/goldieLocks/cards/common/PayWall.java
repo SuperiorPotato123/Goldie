@@ -1,14 +1,14 @@
-package goldieLocks.cards;
+package goldieLocks.cards.common;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import goldieLocks.character.GainGoldActionExtra;
+import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class PayWall extends BaseCard{
+public class PayWall extends BaseCard {
 
     public static final String ID = makeID(PayWall.class.getSimpleName());
 

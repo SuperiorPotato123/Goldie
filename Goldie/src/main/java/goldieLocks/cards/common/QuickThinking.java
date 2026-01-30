@@ -1,62 +1,65 @@
-package goldieLocks.cards;
+package goldieLocks.cards.common;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class SpareCannon extends BaseCard{
+public class QuickThinking extends BaseCard {
 
-    public static final String ID = makeID(SpareCannon.class.getSimpleName());
+    public static final String ID = makeID(QuickThinking.class.getSimpleName());
 
-    private static final int DAMAGE = 9;
-    private static final int UPG_DAMAGE = 3;
 
 
 
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
-            CardType.ATTACK,
+            CardType.SKILL,
             CardRarity.COMMON,
-            CardTarget.ENEMY,
-            1
+            CardTarget.NONE,
+            -2
     );
 
-    public SpareCannon() {
+    public QuickThinking() {
         super(ID, info);
 
-        setDamage(DAMAGE, UPG_DAMAGE);
+        this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-            upgradeDamage(2);
         }
+    }
+
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
+        return false;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
     @Override
     public void triggerOnEndOfPlayerTurn() {
         // Surplus effect
         if(EnergyPanel.totalCount > 0) {
-            AbstractDungeon.player.hand.moveToDeck(this, false);
+            AbstractPlayer p = AbstractDungeon.player;
+            addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, magicNumber), magicNumber));
         }
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new SpareCannon();
+        return new QuickThinking();
     }
 }

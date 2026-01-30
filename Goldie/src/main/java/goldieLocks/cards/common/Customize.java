@@ -1,29 +1,30 @@
-package goldieLocks.cards;
+package goldieLocks.cards.common;
 
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import goldieLocks.character.GainGoldActionExtra;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class Charisma extends BaseCard{
+public class Customize extends BaseCard {
 
-    public static final String ID = makeID(Charisma.class.getSimpleName());
+    public static final String ID = makeID(Customize.class.getSimpleName());
 
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
             CardType.SKILL,
-            CardRarity.UNCOMMON,
-            CardTarget.ENEMY,
+            CardRarity.COMMON,
+            CardTarget.SELF,
             1
     );
 
-    public Charisma() {
+    public Customize() {
         super(ID, info);
 
-        this.baseMagicNumber = 5;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -36,15 +37,12 @@ public class Charisma extends BaseCard{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(m !=null && m.intent != AbstractMonster.Intent.ATTACK && m.intent != AbstractMonster.Intent.ATTACK_BUFF && m.intent != AbstractMonster.Intent.ATTACK_DEBUFF
-        && m.intent != AbstractMonster.Intent.ATTACK_DEFEND) {
-            addToBot(new GainGoldActionExtra(magicNumber, p));
-        }
-
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber/2)));
+        p.loseGold(2);
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Charisma();
+        return new Customize();
     }
 }
