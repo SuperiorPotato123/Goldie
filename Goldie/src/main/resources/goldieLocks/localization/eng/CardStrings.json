@@ -85,5 +85,21 @@
   "${modID}:PayWall": {
     "NAME": "Pay Wall",
     "DESCRIPTION": "Lose !M! Gold, Gain !B! Block"
-  }
+  },
+
+  "${modID}:QuickThinking": {
+    "NAME": "Quick Thinking",
+    "DESCRIPTION": "Surplus, at the beginning of your next turn, draw !M! cards",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card"
+    ]
+  },
+
+    "${modID}:Reserve": {
+      "NAME": "Reserve",
+      "DESCRIPTION": "Surplus, at the beginning of your next turn, Gain !M! Energy",
+      "EXTENDED_DESCRIPTION": [
+        "I can't play this card"
+      ]
+    }
 }

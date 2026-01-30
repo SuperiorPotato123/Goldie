@@ -26,6 +26,16 @@ public class Reserve extends BaseCard {
 
     public Reserve() {
         super(ID, info);
+
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
+    }
+
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeMagicNumber(1);
+        }
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
