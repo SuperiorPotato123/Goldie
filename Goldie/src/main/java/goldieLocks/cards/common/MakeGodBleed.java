@@ -40,6 +40,7 @@ public class MakeGodBleed extends BaseCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
+            upgradeDamage(UPG_DAMAGE);
         }
     }
 

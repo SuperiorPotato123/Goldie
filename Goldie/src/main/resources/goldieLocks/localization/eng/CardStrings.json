@@ -75,6 +75,11 @@
   "${modID}:Fortify": {
     "NAME": "Fortify",
     "DESCRIPTION": "Gain !B! Block, Draw !M! cards"
+  },
+
+  "${modID}:MakeGodBleed": {
+    "NAME": "Make God Bleed",
+    "DESCRIPTION": "Apply !M! Vulnerable, deal !D! Damage."
   }
 
 }
