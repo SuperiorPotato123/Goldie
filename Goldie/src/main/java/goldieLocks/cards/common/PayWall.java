@@ -28,12 +28,14 @@ public class PayWall extends BaseCard {
         super(ID, info);
 
         setBlock(BLOCK, UPG_BLOCK);
+        this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, this.block));
-        p.loseGold(4);
+        p.loseGold(magicNumber);
     }
 
     @Override

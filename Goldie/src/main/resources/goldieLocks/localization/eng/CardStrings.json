@@ -80,6 +80,10 @@
   "${modID}:MakeGodBleed": {
     "NAME": "Make God Bleed",
     "DESCRIPTION": "Apply !M! Vulnerable, deal !D! Damage."
-  }
+  },
 
+  "${modID}:PayWall": {
+    "NAME": "Pay Wall",
+    "DESCRIPTION": "Lose !M! Gold, Gain !B! Block"
+  }
 }
