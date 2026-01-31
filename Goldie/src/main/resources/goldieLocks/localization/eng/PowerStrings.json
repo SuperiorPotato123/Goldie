@@ -9,7 +9,7 @@
   "${modID}:BloodMoneyPower": {
     "NAME": "Blood Money",
     "DESCRIPTIONS": [
-      "Gain gold everytime you are dealt damage"
+      "Whenever you lose HP, gain that much Gold."
     ]
   },
 

@@ -10,6 +10,12 @@
     ]
   },
 
+
+  "${modID}:AerialAssault": {
+    "NAME": "Aerial Assault",
+    "DESCRIPTION": "Deal !D! Damage. If you are flying, deal !D! Damage again"
+  },
+
   "${modID}:CostEffective": {
     "NAME": "Cost Effective",
     "DESCRIPTION": "Gain 6 Block, Gain 2 Gold",
@@ -77,6 +83,67 @@
     "DESCRIPTION": "Gain !B! Block, Draw !M! cards"
   },
 
+  "${modID}:Stun": {
+    "NAME": "Stun",
+    "DESCRIPTION": "Deal !D! Damage, Gain !B! Block"
+  },
+
+  "${modID}:ChargeUp": {
+    "NAME": "Charge Up",
+    "DESCRIPTION": "Deal !D! Damage, Surplus, permanently increase the damage of this card by 1"
+  },
+
+  "${modID}:Resolder": {
+    "NAME": "Resolder",
+    "DESCRIPTION": "Lose 2 Gold, Gain 1 Dexterity",
+    "UPGRADE_DESCRIPTION": "Lose 4 Gold, Gain 2 Dexterity"
+  },
+
+  "${modID}:Invest": {
+    "NAME": "Invest",
+    "DESCRIPTION": "In 10 Turns Gain 200 Gold",
+    "UPGRADE_DESCRIPTION": "In 7 Turns Gain 200 Gold"
+  },
+
+  "${modID}:Invisible": {
+    "NAME": "Invisible",
+    "DESCRIPTION": "If you are flying, Gain 1 Intangible",
+    "UPGRADE_DESCRIPTION": "In 7 Turns Gain 200 Gold"
+  },
+
+  "${modID}:Overload": {
+    "NAME": "Overload",
+    "DESCRIPTION": "Double your strength, you cant play attacks next turn (Exhaust)",
+    "UPGRADE_DESCRIPTION": "Double your strength, you cant play attacks next turn"
+  },
+
+  "${modID}:TimeTravel": {
+    "NAME": "Time Travel",
+    "DESCRIPTION": "Gain life equal to how much life you lost last turn"
+  },
+
+  "${modID}:LithiumIon": {
+    "NAME": "Lithium Ion",
+    "DESCRIPTION": "Energy is now conserved between turns"
+  },
+
+  "${modID}:Obliterate": {
+    "NAME": "Obliterate",
+    "DESCRIPTION": "Deal 15 Damage, if the enemy dies, deal damage equal to it's Max HP to all enemies",
+    "UPGRADE_DESCRIPTION": "Deal 25 Damage, if the enemy dies, deal damage equal to it's Max HP to all enemies"
+  },
+
+  "${modID}:EliteBuster": {
+    "NAME": "Elite Buster",
+    "DESCRIPTION": "You can no longer become Frail"
+  },
+
+  "${modID}:Infrastructure": {
+    "NAME": "Infrastructure",
+    "DESCRIPTION": "Pay 15 Gold, Gain 1 Energy, draw 2 cards",
+    "UPGRADE_DESCRIPTION": "Pay 15 Gold, Gain 2 Energy, draw 4 cards"
+  },
+
   "${modID}:MakeGodBleed": {
     "NAME": "Make God Bleed",
     "DESCRIPTION": "Apply !M! Vulnerable, deal !D! Damage."
@@ -112,5 +179,14 @@
       "EXTENDED_DESCRIPTION": [
         "I can't play this card"
       ]
-    }
-}
+    },
+
+  "${modID}:Profit": {
+    "NAME": "Profit",
+    "DESCRIPTION": "Surplus, Gain 3 Gold",
+    "UPGRADE_DESCRIPTION": "Surplus, Gain 5 Gold",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card"
+      ]
+    },
+
