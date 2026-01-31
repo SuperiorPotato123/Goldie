@@ -94,8 +94,7 @@
 
   "${modID}:SuitUp": {
     "NAME": "Suit Up",
-    "DESCRIPTION": "Surplus, Gain 7 Block",
-    "UPGRADE_DESCRIPTION": "Surplus, Gain 10 Block"
+    "DESCRIPTION": "Surplus, Gain !B! Block"
   },
 
 
