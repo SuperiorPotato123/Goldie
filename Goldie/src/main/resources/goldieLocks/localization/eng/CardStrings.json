@@ -164,8 +164,15 @@
     "DESCRIPTION": "Surplus, Gain !B! Block"
   },
 
+  "${modID}:Profit": {
+    "NAME": "Profit",
+    "DESCRIPTION": "Surplus, Gain 3 Gold",
+    "UPGRADE_DESCRIPTION": "Surplus, Gain 5 Gold",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card"
+    ],
 
-  "${modID}:QuickThinking": {
+    "${modID}:QuickThinking": {
     "NAME": "Quick Thinking",
     "DESCRIPTION": "Surplus, at the beginning of your next turn, draw !M! cards",
     "EXTENDED_DESCRIPTION": [
@@ -181,12 +188,6 @@
       ]
     },
 
-  "${modID}:Profit": {
-    "NAME": "Profit",
-    "DESCRIPTION": "Surplus, Gain 3 Gold",
-    "UPGRADE_DESCRIPTION": "Surplus, Gain 5 Gold",
-    "EXTENDED_DESCRIPTION": [
-      "I can't play this card"
-      ]
-    },
+
+
 
