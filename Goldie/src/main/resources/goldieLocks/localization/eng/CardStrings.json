@@ -132,7 +132,10 @@
   },
   "${modID}:SuitUp": {
     "NAME": "Suit Up",
-    "DESCRIPTION": "Surplus, Gain !B! Block"
+    "DESCRIPTION": "Surplus, Gain !B! Block",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card"
+    ]
   },
   "${modID}:Profit": {
     "NAME": "Profit",
