@@ -52,7 +52,7 @@
   },
 
   "${modID}:Inheritence": {
-    "NAME": "Inheritence",
+    "NAME": "Inheritance",
     "DESCRIPTION": "At the start of your turn gain 1 Gold",
     "UPGRADE_DESCRIPTION": "At the start of your turn gain 2 Gold"
   },
@@ -86,6 +86,18 @@
     "NAME": "Pay Wall",
     "DESCRIPTION": "Lose !M! Gold, Gain !B! Block"
   },
+
+  "${modID}:Villianize": {
+    "NAME": "Villainize",
+    "DESCRIPTION": "Apply 1 Vulnerable, Gain 1 gold"
+  },
+
+  "${modID}:SuitUp": {
+    "NAME": "Suit Up",
+    "DESCRIPTION": "Surplus, Gain 7 Block",
+    "UPGRADE_DESCRIPTION": "Surplus, Gain 10 Block"
+  },
+
 
   "${modID}:QuickThinking": {
     "NAME": "Quick Thinking",
