@@ -74,7 +74,7 @@
   },
   "${modID}:ChargeUp": {
     "NAME": "Charge Up",
-    "DESCRIPTION": "Deal !D! Damage, Surplus, permanently increase the damage of this card by 1"
+    "DESCRIPTION": "Deal !D! Damage NL ${modID}:Surplus NL permanently increase the damage of this card by 1"
   },
   "${modID}:Resolder": {
     "NAME": "Resolder",
@@ -132,29 +132,28 @@
   },
   "${modID}:SuitUp": {
     "NAME": "Suit Up",
-    "DESCRIPTION": "Surplus, Gain !B! Block",
+    "DESCRIPTION": "Unplayable NL ${modID}:Surplus NL Gain !B! Block",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card"
     ]
   },
   "${modID}:Profit": {
     "NAME": "Profit",
-    "DESCRIPTION": "Surplus, Gain 3 Gold",
-    "UPGRADE_DESCRIPTION": "Surplus, Gain 5 Gold",
+    "DESCRIPTION": "Unplayable NL ${modID}:Surplus NL Gain !M! Gold",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card"
     ]
   },
   "${modID}:QuickThinking": {
     "NAME": "Quick Thinking",
-    "DESCRIPTION": "Surplus, at the beginning of your next turn, draw !M! cards",
+    "DESCRIPTION": "Unplayable NL ${modID}:Surplus NL at the beginning of your next turn, draw !M! cards",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card"
     ]
   },
   "${modID}:Reserve": {
     "NAME": "Reserve",
-    "DESCRIPTION": "Surplus, at the beginning of your next turn, Gain !M! Energy",
+    "DESCRIPTION": "Unplayable NL ${modID}:Surplus NL at the beginning of your next turn, Gain !M! Energy",
     "EXTENDED_DESCRIPTION": [
       "I can't play this card"
     ]
