@@ -26,19 +26,22 @@ public class Customize extends BaseCard {
 
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+
+        setCustomVar("magic2", VariableType.MAGIC, 1, 1);
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(2);
+            upgradeCustomVar("magic2");
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber/2)));
-        p.loseGold(2);
+        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, customVar("magic2"))));
+        p.loseGold(magicNumber);
     }
 
     @Override

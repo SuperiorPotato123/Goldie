@@ -20,8 +20,8 @@
   },
   "${modID}:Customize": {
     "NAME": "Customize",
-    "DESCRIPTION": "Lose 2 Gold, Gain 1 Strength",
-    "UPGRADE_DESCRIPTION": "Lose 4 Gold, Gain 2 Strength"
+    "DESCRIPTION": "Lose !M! Gold, Gain !${modID}:magic2! Strength",
+    "UPGRADE_DESCRIPTION": "Lose !M! Gold, Gain !${modID}:magic2! Strength"
   },
   "${modID}:BloodMoney": {
     "NAME": "Blood Money",
@@ -78,8 +78,8 @@
   },
   "${modID}:Resolder": {
     "NAME": "Resolder",
-    "DESCRIPTION": "Lose 2 Gold, Gain 1 Dexterity",
-    "UPGRADE_DESCRIPTION": "Lose 4 Gold, Gain 2 Dexterity"
+    "DESCRIPTION": "Lose !M! Gold, Gain !${modID}:magic2! Dexterity",
+    "UPGRADE_DESCRIPTION": "Lose !M! Gold, Gain !${modID}:magic2! Dexterity"
   },
   "${modID}:Invest": {
     "NAME": "Invest",
