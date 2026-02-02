@@ -11,12 +11,14 @@ public class InheritancePower extends BasePower {
     private static final boolean TURN_BASED = false;
 
 
-    public InheritancePower(AbstractCreature owner, int amount) {
+    public InheritancePower(AbstractCreature owner, int amount)
+    {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+
     }
 
     public void atStartOfTurn() {
-        addToBot(new GainGoldActionExtra(1, this.owner));
+        addToBot(new GainGoldActionExtra(amount, this.owner));
     }
 
     public void updateDescription() {
