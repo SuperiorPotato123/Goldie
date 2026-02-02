@@ -6,12 +6,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
-import goldieLocks.powers.InheritencePower;
+import goldieLocks.powers.InheritancePower;
 import goldieLocks.util.CardStats;
 
-public class Inheritence extends BaseCard {
+public class Inheritance extends BaseCard {
 
-    public static final String ID = makeID(Inheritence.class.getSimpleName());
+    public static final String ID = makeID(Inheritance.class.getSimpleName());
 
 
 
@@ -20,10 +20,10 @@ public class Inheritence extends BaseCard {
             CardType.POWER,
             CardRarity.UNCOMMON,
             CardTarget.SELF,
-            3
+            2
     );
 
-    public Inheritence() {
+    public Inheritance() {
         super(ID, info);
 
         this.baseMagicNumber = 1;
@@ -39,11 +39,11 @@ public class Inheritence extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new InheritencePower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new InheritancePower(p, magicNumber)));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Inheritence();
+        return new Inheritance();
     }
 }

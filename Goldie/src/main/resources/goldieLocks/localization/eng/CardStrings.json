@@ -20,8 +20,8 @@
   },
   "${modID}:Customize": {
     "NAME": "Customize",
-    "DESCRIPTION": "Lose 2 Gold, Gain 1 Strength",
-    "UPGRADE_DESCRIPTION": "Lose 4 Gold, Gain 2 Strength"
+    "DESCRIPTION": "Lose !M! Gold, Gain !${modID}:magic2! Strength",
+    "UPGRADE_DESCRIPTION": "Lose !M! Gold, Gain !${modID}:magic2! Strength"
   },
   "${modID}:BloodMoney": {
     "NAME": "Blood Money",
@@ -47,7 +47,7 @@
     "NAME": "Break The Bank",
     "DESCRIPTION": "Deal Damage Equal to the Amount of Gold you've gained this combat (!D!)"
   },
-  "${modID}:Inheritence": {
+  "${modID}:Inheritance": {
     "NAME": "Inheritance",
     "DESCRIPTION": "At the start of your turn gain 1 Gold",
     "UPGRADE_DESCRIPTION": "At the start of your turn gain 2 Gold"
@@ -78,8 +78,8 @@
   },
   "${modID}:Resolder": {
     "NAME": "Resolder",
-    "DESCRIPTION": "Lose 2 Gold, Gain 1 Dexterity",
-    "UPGRADE_DESCRIPTION": "Lose 4 Gold, Gain 2 Dexterity"
+    "DESCRIPTION": "Lose !M! Gold, Gain !${modID}:magic2! Dexterity",
+    "UPGRADE_DESCRIPTION": "Lose !M! Gold, Gain !${modID}:magic2! Dexterity"
   },
   "${modID}:Invest": {
     "NAME": "Invest",
@@ -126,7 +126,7 @@
     "NAME": "Pay Wall",
     "DESCRIPTION": "Lose !M! Gold, Gain !B! Block"
   },
-  "${modID}:Villianize": {
+  "${modID}:Villainize": {
     "NAME": "Villainize",
     "DESCRIPTION": "Apply 1 Vulnerable, Gain 1 gold"
   },

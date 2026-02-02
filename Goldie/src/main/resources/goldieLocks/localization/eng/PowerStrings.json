@@ -13,8 +13,8 @@
     ]
   },
 
-  "${modID}:InheritencePower": {
-    "NAME": "Inheritance",
+  "${modID}:InheritancePower": {
+    "NAME": "Inheritence",
     "DESCRIPTIONS": [
       "At the beginning of your turn gain #b",
       " gold."
