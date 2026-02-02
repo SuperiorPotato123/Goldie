@@ -19,5 +19,14 @@
       "At the beginning of your turn gain #b",
       " gold."
     ]
+  },
+
+  "${modID}:InvestPower": {
+    "NAME": "Invest",
+    "DESCRIPTIONS": [
+      "In #b",
+      " turns gain #y",
+      " gold."
+    ]
   }
 }

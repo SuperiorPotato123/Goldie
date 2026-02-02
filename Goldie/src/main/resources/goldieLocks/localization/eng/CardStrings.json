@@ -83,8 +83,7 @@
   },
   "${modID}:Invest": {
     "NAME": "Invest",
-    "DESCRIPTION": "In 10 Turns Gain 200 Gold",
-    "UPGRADE_DESCRIPTION": "In 7 Turns Gain 200 Gold"
+    "DESCRIPTION": "In !M! Turns Gain 200 Gold"
   },
   "${modID}:Invisible": {
     "NAME": "Invisible",
