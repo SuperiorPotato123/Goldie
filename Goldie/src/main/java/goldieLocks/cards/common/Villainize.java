@@ -11,9 +11,9 @@ import goldieLocks.character.GainGoldActionExtra;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class Villianize extends BaseCard {
+public class Villainize extends BaseCard {
 
-    public static final String ID = makeID(Villianize.class.getSimpleName());
+    public static final String ID = makeID(Villainize.class.getSimpleName());
 
 
 
@@ -26,7 +26,7 @@ public class Villianize extends BaseCard {
             1
     );
 
-    public Villianize() {
+    public Villainize() {
         super(ID, info);
 
         this.baseMagicNumber = 1;
@@ -48,6 +48,6 @@ public class Villianize extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Villianize();
+        return new Villainize();
     }
 }

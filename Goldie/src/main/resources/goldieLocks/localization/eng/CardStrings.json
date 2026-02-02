@@ -47,7 +47,7 @@
     "NAME": "Break The Bank",
     "DESCRIPTION": "Deal Damage Equal to the Amount of Gold you've gained this combat (!D!)"
   },
-  "${modID}:Inheritence": {
+  "${modID}:Inheritance": {
     "NAME": "Inheritance",
     "DESCRIPTION": "At the start of your turn gain 1 Gold",
     "UPGRADE_DESCRIPTION": "At the start of your turn gain 2 Gold"
@@ -126,7 +126,7 @@
     "NAME": "Pay Wall",
     "DESCRIPTION": "Lose !M! Gold, Gain !B! Block"
   },
-  "${modID}:Villianize": {
+  "${modID}:Villainize": {
     "NAME": "Villainize",
     "DESCRIPTION": "Apply 1 Vulnerable, Gain 1 gold"
   },
