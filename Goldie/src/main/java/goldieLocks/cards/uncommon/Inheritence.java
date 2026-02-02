@@ -20,7 +20,7 @@ public class Inheritence extends BaseCard {
             CardType.POWER,
             CardRarity.UNCOMMON,
             CardTarget.SELF,
-            3
+            2
     );
 
     public Inheritence() {

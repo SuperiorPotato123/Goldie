@@ -22,7 +22,7 @@ public class Fortify extends BaseCard {
             CardType.SKILL,
             CardRarity.COMMON,
             CardTarget.SELF,
-            1
+            2
     );
 
     public Fortify() {
