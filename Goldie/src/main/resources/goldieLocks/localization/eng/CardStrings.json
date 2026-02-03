@@ -49,8 +49,8 @@
   },
   "${modID}:Inheritance": {
     "NAME": "Inheritance",
-    "DESCRIPTION": "At the start of your turn gain 1 Gold",
-    "UPGRADE_DESCRIPTION": "At the start of your turn gain 2 Gold"
+    "DESCRIPTION": "At the start of your turn gain !M! Gold",
+    "UPGRADE_DESCRIPTION": "At the start of your turn gain !M! Gold"
   },
   "${modID}:HeroicLanding": {
     "NAME": "Heroic Landing",
