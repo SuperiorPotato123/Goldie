@@ -15,8 +15,8 @@
   },
   "${modID}:CostEffective": {
     "NAME": "Cost Effective",
-    "DESCRIPTION": "Gain 6 Block, Gain 2 Gold",
-    "UPGRADE_DESCRIPTION": "Gain 8 Block, Gain 2 Gold"
+    "DESCRIPTION": "Gain !B! Block, Gain 2 Gold",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block, Gain 2 Gold"
   },
   "${modID}:Customize": {
     "NAME": "Customize",
@@ -30,8 +30,8 @@
   },
   "${modID}:Charisma": {
     "NAME": "Charisma",
-    "DESCRIPTION": "If the enemy does not intend to attack, gain 5 gold.",
-    "UPGRADE_DESCRIPTION": "If the enemy does not intend to attack, gain 7 gold."
+    "DESCRIPTION": "If the enemy does not intend to attack, gain !M! gold.",
+    "UPGRADE_DESCRIPTION": "If the enemy does not intend to attack, gain !M! gold."
   },
   "${modID}:Repulsor": {
     "NAME": "Repulsor",
@@ -40,8 +40,8 @@
   },
   "${modID}:Pulverize": {
     "NAME": "Pulverize",
-    "DESCRIPTION": "Deal 8 Damage, Gain 2 Gold",
-    "UPGRADE_DESCRIPTION": "Deal 11 Damage, Gain 2 Gold"
+    "DESCRIPTION": "Deal !D! Damage, Gain 2 Gold",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage, Gain 2 Gold"
   },
   "${modID}:BreakTheBank": {
     "NAME": "Break The Bank",
@@ -87,8 +87,8 @@
   },
   "${modID}:Invisible": {
     "NAME": "Invisible",
-    "DESCRIPTION": "If you are flying, Gain 1 Intangible",
-    "UPGRADE_DESCRIPTION": "In 7 Turns Gain 200 Gold"
+    "DESCRIPTION": "Gain !B! Block, you don't lose block until you are attacked.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block, you don't lose block until you are attacked"
   },
   "${modID}:Overload": {
     "NAME": "Overload",
