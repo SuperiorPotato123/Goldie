@@ -24,7 +24,7 @@ public class HeroicLanding extends BaseCard {
             CardType.SKILL,
             CardRarity.UNCOMMON,
             CardTarget.ALL_ENEMY,
-            1
+            0
     );
 
     public HeroicLanding() {
