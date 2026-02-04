@@ -81,8 +81,7 @@
   },
   "${modID}:Invisible": {
     "NAME": "Invisible",
-    "DESCRIPTION": "Gain !B! Block, you don't lose block until you are attacked.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block, you don't lose block until you are attacked"
+    "DESCRIPTION": "Gain !B! Block, you don't lose block until you are attacked."
   },
   "${modID}:Overload": {
     "NAME": "Overload",
