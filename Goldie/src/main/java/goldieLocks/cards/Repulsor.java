@@ -32,13 +32,6 @@ public class Repulsor extends BaseCard{
         setDamage(DAMAGE, UPG_DAMAGE);
     }
 
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            upgradeMagicNumber(2);
-        }
-    }
-
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(p.gold > 1){
