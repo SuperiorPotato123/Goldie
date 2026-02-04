@@ -15,8 +15,7 @@
   },
   "${modID}:CostEffective": {
     "NAME": "Cost Effective",
-    "DESCRIPTION": "Gain !B! Block, Gain 2 Gold",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block, Gain 2 Gold"
+    "DESCRIPTION": "Gain !B! Block, Gain 2 Gold"
   },
   "${modID}:Customize": {
     "NAME": "Customize",
@@ -25,23 +24,19 @@
   },
   "${modID}:BloodMoney": {
     "NAME": "Blood Money",
-    "DESCRIPTION": "Whenever you lose HP, gain that much gold.",
-    "UPGRADE_DESCRIPTION": "Whenever you lose HP, gain that much gold."
+    "DESCRIPTION": "Whenever you lose HP, gain that much gold."
   },
   "${modID}:Charisma": {
     "NAME": "Charisma",
-    "DESCRIPTION": "If the enemy does not intend to attack, gain !M! gold.",
-    "UPGRADE_DESCRIPTION": "If the enemy does not intend to attack, gain !M! gold."
+    "DESCRIPTION": "If the enemy does not intend to attack, gain !M! gold."
   },
   "${modID}:Repulsor": {
     "NAME": "Repulsor",
-    "DESCRIPTION": "Pay 2 Gold, Deal !D! Damage",
-    "UPGRADE_DESCRIPTION": "Pay 2 Gold, Deal !D! Damage"
+    "DESCRIPTION": "Pay 2 Gold, Deal !D! Damage"
   },
   "${modID}:Pulverize": {
     "NAME": "Pulverize",
-    "DESCRIPTION": "Deal !D! Damage, Gain 2 Gold",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage, Gain 2 Gold"
+    "DESCRIPTION": "Deal !D! Damage, Gain 2 Gold"
   },
   "${modID}:BreakTheBank": {
     "NAME": "Break The Bank",
@@ -49,8 +44,7 @@
   },
   "${modID}:Inheritance": {
     "NAME": "Inheritance",
-    "DESCRIPTION": "At the start of your turn gain !M! Gold",
-    "UPGRADE_DESCRIPTION": "At the start of your turn gain !M! Gold"
+    "DESCRIPTION": "At the start of your turn gain !M! Gold"
   },
   "${modID}:HeroicLanding": {
     "NAME": "Heroic Landing",
