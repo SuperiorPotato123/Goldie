@@ -12,11 +12,9 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class ObliterateAction extends AbstractGameAction{
 
-    private int damage;
     private AbstractCreature owner;
     private DamageInfo info;
     private AbstractCreature target;
-    private static final float DURATION = 0.1F;
 
     public ObliterateAction(AbstractCreature target, DamageInfo info) {
         this.info = info;
@@ -26,6 +24,7 @@ public class ObliterateAction extends AbstractGameAction{
         this.duration = 0.1F;
     }
 
+    // Based on Feed card from the red deck
     public void update() {
         if (this.duration == 0.1F &&
                 this.target != null) {
