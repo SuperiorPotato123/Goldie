@@ -14,8 +14,8 @@ public class Invisible extends BaseCard {
 
     public static final String ID = makeID(Invisible.class.getSimpleName());
 
-    private static final int BLOCK = 8;
-    private static final int UPG_BLOCK = 2;
+    private static final int BLOCK = 5;
+    private static final int UPG_BLOCK = 3;
 
 
     private static final CardStats info = new CardStats(
