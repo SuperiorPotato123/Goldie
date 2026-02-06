@@ -2,7 +2,6 @@ package goldieLocks.powers;
 
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import goldieLocks.character.GainGoldActionExtra;
 
 import static goldieLocks.BasicMod.makeID;
 

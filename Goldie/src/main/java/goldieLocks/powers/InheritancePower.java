@@ -1,7 +1,7 @@
 package goldieLocks.powers;
 
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import goldieLocks.character.GainGoldActionExtra;
 
 import static goldieLocks.BasicMod.makeID;
 
@@ -18,7 +18,7 @@ public class InheritancePower extends BasePower {
     }
 
     public void atStartOfTurn() {
-        addToBot(new GainGoldActionExtra(amount, this.owner));
+        addToBot(new GainGoldAction(amount));
     }
 
     public void updateDescription() {

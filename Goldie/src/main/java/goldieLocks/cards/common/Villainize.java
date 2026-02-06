@@ -2,12 +2,12 @@ package goldieLocks.cards.common;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import goldieLocks.cards.BaseCard;
-import goldieLocks.character.GainGoldActionExtra;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
@@ -43,7 +43,7 @@ public class Villainize extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
             addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-            addToBot(new GainGoldActionExtra(1, p));
+            addToBot(new GainGoldAction(1));
     }
 
     @Override

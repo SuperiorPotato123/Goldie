@@ -1,10 +1,10 @@
 package goldieLocks.cards.uncommon;
 
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import goldieLocks.cards.BaseCard;
-import goldieLocks.character.GainGoldActionExtra;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
@@ -38,7 +38,7 @@ public class Charisma extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(m !=null && m.intent != AbstractMonster.Intent.ATTACK && m.intent != AbstractMonster.Intent.ATTACK_BUFF && m.intent != AbstractMonster.Intent.ATTACK_DEBUFF
         && m.intent != AbstractMonster.Intent.ATTACK_DEFEND) {
-            addToBot(new GainGoldActionExtra(magicNumber, p));
+            addToBot(new GainGoldAction(magicNumber));
         }
 
     }

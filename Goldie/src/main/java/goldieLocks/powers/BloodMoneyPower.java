@@ -1,9 +1,9 @@
 package goldieLocks.powers;
 
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import goldieLocks.character.GainGoldActionExtra;
 
 import static goldieLocks.BasicMod.makeID;
 
@@ -18,7 +18,7 @@ public class BloodMoneyPower extends BasePower {
     }
 
     public void wasHPLost(DamageInfo info, int damageAmount) {
-        addToBot(new GainGoldActionExtra(damageAmount, this.owner));
+        addToBot(new GainGoldAction(damageAmount));
     }
 
     public void updateDescription() {

@@ -1,6 +1,7 @@
 package goldieLocks.cards.common;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import goldieLocks.cards.BaseCard;
-import goldieLocks.character.GainGoldActionExtra;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
@@ -55,7 +55,7 @@ public class Profit extends BaseCard {
         // Surplus effect
         if(EnergyPanel.totalCount > 0) {
             AbstractPlayer p = AbstractDungeon.player;
-            addToBot(new GainGoldActionExtra(magicNumber, p));
+            addToBot(new GainGoldAction(magicNumber));
         }
     }
 

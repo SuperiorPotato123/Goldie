@@ -1,9 +1,9 @@
 package goldieLocks.powers;
 
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import goldieLocks.character.GainGoldActionExtra;
 
 import static goldieLocks.BasicMod.makeID;
 
@@ -33,11 +33,11 @@ public class InvestPower extends BasePower {
     public void atEndOfRound() {
         if (this.amount == 0) {
             // This just mimics how other cards are written. This shouldn't get called most of the time if ever
-            addToBot(new GainGoldActionExtra(GoldCount, this.owner));
+            addToBot(new GainGoldAction(GoldCount));
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
             GoldCount = 0;
         } else if (this.amount == 1){
-            addToBot(new GainGoldActionExtra(GoldCount, this.owner));
+            addToBot(new GainGoldAction(GoldCount));
             addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
             GoldCount = 0;
             updateDescription();
