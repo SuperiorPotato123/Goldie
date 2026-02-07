@@ -42,11 +42,11 @@ public class SuitUp extends BaseCard {
     }
 
     @Override
-    public void triggerOnEndOfPlayerTurn() {
+    public void triggerOnEndOfTurnForPlayingCard() {
         // Surplus effect
         if(EnergyPanel.totalCount > 0) {
             AbstractPlayer p = AbstractDungeon.player;
-            addToBot(new GainBlockAction(p, p, this.block));
+            addToBot(new GainBlockAction(p, p, block));
         }
     }
 
