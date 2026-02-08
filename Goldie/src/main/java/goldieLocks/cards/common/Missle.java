@@ -23,7 +23,7 @@ public class Missle extends BaseCard {
             CardType.ATTACK,
             CardRarity.COMMON,
             CardTarget.ENEMY,
-            1
+            0
     );
 
     public Missle() {
