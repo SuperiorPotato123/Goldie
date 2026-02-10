@@ -107,8 +107,7 @@
   },
   "${modID}:Infrastructure": {
     "NAME": "Infrastructure",
-    "DESCRIPTION": "Pay 15 Gold, Gain 1 Energy, draw 2 cards",
-    "UPGRADE_DESCRIPTION": "Pay 15 Gold, Gain 2 Energy, draw 4 cards"
+    "DESCRIPTION": "Pay !${modID}:goldCost! Gold, Gain !${modID}:energyGain! Energy, draw !${modID}:cardDraw! cards"
   },
   "${modID}:MakeGodBleed": {
     "NAME": "Make God Bleed",
