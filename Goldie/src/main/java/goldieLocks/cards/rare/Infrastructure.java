@@ -18,7 +18,7 @@ public class Infrastructure extends BaseCard {
 
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
-            CardType.POWER,
+            CardType.SKILL,
             CardRarity.RARE,
             CardTarget.SELF,
             0
