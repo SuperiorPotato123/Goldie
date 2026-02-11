@@ -29,7 +29,9 @@ import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.ui.FtueTip;
 import com.megacrit.cardcrawl.ui.MultiPageFtue;
+import goldieLocks.cards.Defend;
 import goldieLocks.cards.Repulsor;
+import goldieLocks.cards.Strike;
 
 import java.util.ArrayList;
 
@@ -149,10 +151,16 @@ public class MyCharacter extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         //List of IDs of cards for your starting deck.
         //If you want multiple of the same card, you have to add it multiple times.
-        retVal.add(Strike_Red.ID);
-        retVal.add(Strike_Red.ID);
-        retVal.add(Defend_Blue.ID);
-        retVal.add(Defend_Blue.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
         retVal.add(Repulsor.ID);
 
         return retVal;
