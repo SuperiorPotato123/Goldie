@@ -217,7 +217,7 @@
     "NAME": "Iron Fist",
     "DESCRIPTION": "Lose 8 gold, Deal !D! Damage"
   },
-  "${modID}:Ubibeam": {
+  "${modID}:Unibeam": {
     "NAME": "Unibeam",
     "DESCRIPTION": "Deal !D! Damage, gain !M! strength"
   },

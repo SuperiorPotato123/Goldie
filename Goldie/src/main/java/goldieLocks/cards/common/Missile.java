@@ -1,7 +1,6 @@
 package goldieLocks.cards.common;
 
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,9 +9,9 @@ import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class Missle extends BaseCard {
+public class Missile extends BaseCard {
 
-    public static final String ID = makeID(Missle.class.getSimpleName());
+    public static final String ID = makeID(Missile.class.getSimpleName());
 
     private static final int DAMAGE = 15;
     private static final int UPG_DAMAGE = 5;
@@ -26,7 +25,7 @@ public class Missle extends BaseCard {
             0
     );
 
-    public Missle() {
+    public Missile() {
         super(ID, info);
 
         setDamage(DAMAGE, UPG_DAMAGE);
@@ -44,6 +43,6 @@ public class Missle extends BaseCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Missle();
+        return new Missile();
     }
 }
