@@ -13,6 +13,22 @@
     "NAME": "Aerial Assault",
     "DESCRIPTION": "Deal !D! Damage. If you are flying, deal !D! Damage again"
   },
+  "${modID}:Maneuver": {
+    "NAME": "Maneuver",
+    "DESCRIPTION": "Deal !D! Damage, Surplus Gain !B! Block"
+  },
+  "${modID}:Missile": {
+    "NAME": "Missile",
+    "DESCRIPTION": "Pay 5 Gold, Deal !D! Damage, (Exhaust)"
+  },
+  "${modID}:Self-Defense": {
+    "NAME": "Self-Defense",
+    "DESCRIPTION": "Deal !D! Damage, Draw !M! Cards"
+  },
+  "${modID}:Flares": {
+    "NAME": "Flares",
+    "DESCRIPTION": "Gain !B! Block, Apply 1 Weak"
+  },
   "${modID}:CostEffective": {
     "NAME": "Cost Effective",
     "DESCRIPTION": "Gain !B! Block, Gain 2 Gold"
@@ -88,22 +104,30 @@
     "DESCRIPTION": "Double your strength, you cant play attacks next turn (Exhaust)",
     "UPGRADE_DESCRIPTION": "Double your strength, you cant play attacks next turn"
   },
-  "${modID}:TimeTravel": {
-    "NAME": "Time Travel",
+  "${modID}:MakeRestitution": {
+    "NAME": "Make Restitution",
     "DESCRIPTION": "Gain life equal to how much life you lost last turn"
   },
   "${modID}:LithiumIon": {
     "NAME": "Lithium Ion",
     "DESCRIPTION": "Energy is now conserved between turns"
   },
+  "${modID}:PayToWin": {
+    "NAME": "Pay to Win",
+    "DESCRIPTION": "Pay 60 Gold, Deal !D! Damage to all enemies"
+  },
+  "${modID}:PainOfRiches": {
+    "NAME": "Pain of Riches",
+    "DESCRIPTION": "Deal !D! Damage to all Enemies, Gain Gold equal to the amount of unblocked Damage (Exhaust)"
+  },
   "${modID}:Obliterate": {
     "NAME": "Obliterate",
     "DESCRIPTION": "Deal 15 Damage, if the enemy dies, deal damage equal to it's Max HP to all enemies",
     "UPGRADE_DESCRIPTION": "Deal 25 Damage, if the enemy dies, deal damage equal to it's Max HP to all enemies"
   },
-  "${modID}:EliteBuster": {
-    "NAME": "Elite Buster",
-    "DESCRIPTION": "You can no longer become Frail"
+  "${modID}:MidasTouch": {
+    "NAME": "Midas Touch",
+    "DESCRIPTION": "Whenever you play a card, gain 1 Gold."
   },
   "${modID}:Infrastructure": {
     "NAME": "Infrastructure",
@@ -113,6 +137,18 @@
     "NAME": "Make God Bleed",
     "DESCRIPTION": "Apply !M! Vulnerable, deal !D! Damage."
   },
+  "${modID}:InvestedInterest": {
+    "NAME": "Invested Interest",
+    "DESCRIPTION":"Deal !D! Damage, Whenever you gain Gold this turn the enemy loses !M! hp"
+  },
+  "${modID}:BrassTax": {
+    "NAME": "Brass Tax",
+    "DESCRIPTION": "Reduce all the cards in your hand down to 0, whenever you play a card this turn lose 3 gold"
+  },
+  "${modID}:TungstenCoating": {
+    "NAME": "Tungsten Coating",
+    "DESCRIPTION": "Exhaust your hand, gain 1 Intangible for each card exhausted (Exhaust)"
+  },
   "${modID}:PayWall": {
     "NAME": "Pay Wall",
     "DESCRIPTION": "Lose !M! Gold, Gain !B! Block"
@@ -120,6 +156,98 @@
   "${modID}:Villainize": {
     "NAME": "Villainize",
     "DESCRIPTION": "Apply 1 Vulnerable, Gain 1 gold"
+  },
+  "${modID}:Fly": {
+    "NAME": "Fly",
+    "DESCRIPTION": "Pay 10 Gold, Start Flying"
+  },
+  "${modID}:CleanEnergy": {
+    "NAME": "Clean Energy",
+    "DESCRIPTION": "Gain !M!x Gold"
+  },
+  "${modID}:Espionage": {
+    "NAME": "Espionage",
+    "DESCRIPTION": "Lose !M! Gold, Enemy loses all Block"
+  },
+  "${modID}:PriceOfProgress": {
+    "NAME": "Price of Progress",
+    "DESCRIPTION": "do your smart guy coding to this"
+  },
+  "${modID}:UtilityBelt": {
+    "NAME": "Utility Belt",
+    "DESCRIPTION": "Put a 0 cost card from your draw pile into your hand"
+  },
+  "${modID}:GatherIntel": {
+    "NAME": "Gather Intel",
+    "DESCRIPTION": "Lose Gold ($) equal to the amount of cards in your hand, draw !M! cards"
+  },
+  "${modID}:SellWeapons": {
+    "NAME": "Sell Weapons",
+    "DESCRIPTION": "Enemy Gains strengths you gain gold Conner do your magic"
+  },
+  "${modID}:Getaway": {
+    "NAME": "Getaway",
+    "DESCRIPTION": "If you have no block, start flying"
+  },
+  "${modID}:Nanobots": {
+    "NAME": "Nanobots",
+    "DESCRIPTION": "Lose 10 Gold, Heal 5 HP"
+  },
+  "${modID}:SolarPanels": {
+    "NAME": "Solar Panels",
+    "DESCRIPTION": "Every 3 turns gain !M! energy"
+  },
+  "${modID}:HighGround": {
+    "NAME": "High Ground",
+    "DESCRIPTION": "Deal double damage when flying"
+  },
+  "${modID}:LearnFromMistakes": {
+    "NAME": "Learn from mistakes",
+    "DESCRIPTION": "Whenever you are dealt damage, apply !M! vulnerable to all enemies"
+  },
+  "${modID}:HandCannon": {
+    "NAME": "Hand Cannon",
+    "DESCRIPTION": "Lose !M! Gold, Deal 10 Damage to all enemies"
+  },
+  "${modID}:HeadFirst": {
+    "NAME": "Head First",
+    "DESCRIPTION": "If you have no block, Deal !D! Damage"
+  },
+  "${modID}:IronFist": {
+    "NAME": "Iron Fist",
+    "DESCRIPTION": "Lose 8 gold, Deal !D! Damage"
+  },
+  "${modID}:Ubibeam": {
+    "NAME": "Unibeam",
+    "DESCRIPTION": "Deal !D! Damage, gain !M! strength"
+  },
+  "${modID}:JumpPad": {
+    "NAME": "Jump Pad",
+    "DESCRIPTION": "Deal !D! Damage, start flying"
+  },
+  "${modID}:RapidFire": {
+    "NAME": "Rapid Fire",
+    "DESCRIPTION": "Deal !D! Damage to a random enemy 6 times",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage 6 times"
+  },
+  "${modID}:PaidProtection": {
+    "NAME": "Paid Protection",
+    "DESCRIPTION": "Whenever you gain gold, gain that much block"
+  },
+  "${modID}:WarAndPeace": {
+    "NAME": "War and Peace",
+    "DESCRIPTION": "Deal !D! Damage, Surplus heal !M! HP"
+  },
+  "${modID}:DelayedAttack": {
+    "NAME": "Delayed Attack",
+    "DESCRIPTION": "Deal !D! Damage to all enemies"
+  },
+  "${modID}:Impale": {
+    "NAME": "Impale",
+    "DESCRIPTION": "Unplayable NL ${modID}:Surplus NL Gain !M! Thorns",
+    "EXTENDED_DESCRIPTION": [
+      "I can't play this card"
+    ]
   },
   "${modID}:SuitUp": {
     "NAME": "Suit Up",
@@ -148,5 +276,19 @@
     "EXTENDED_DESCRIPTION": [
       "I can't play this card"
     ]
+  },
+    "${modID}:Restraint": {
+      "NAME": "Restraint",
+      "DESCRIPTION": "Unplayable NL ${modID}:Surplus NL Gain !M! Strength",
+      "EXTENDED_DESCRIPTION": [
+        "I can't play this card"
+      ]
+    },
+      "${modID}:InitiateThrusters": {
+        "NAME": "Initiate Thrusters",
+        "DESCRIPTION": "Unplayable NL ${modID}:Surplus NL Start Flying",
+        "EXTENDED_DESCRIPTION": [
+          "I can't play this card"
+        ]
   }
 }
