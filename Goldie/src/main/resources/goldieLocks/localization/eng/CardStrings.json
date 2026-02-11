@@ -21,7 +21,7 @@
     "NAME": "Missile",
     "DESCRIPTION": "Pay 5 Gold, Deal !D! Damage, (Exhaust)"
   },
-  "${modID}:Self-Defense": {
+  "${modID}:SelfDefense": {
     "NAME": "Self-Defense",
     "DESCRIPTION": "Deal !D! Damage, Draw !M! Cards"
   },
