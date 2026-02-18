@@ -215,7 +215,7 @@
   },
   "${modID}:HandCannon": {
     "NAME": "Hand Cannon",
-    "DESCRIPTION": "Lose !M! Gold, Deal 10 Damage to all enemies"
+    "DESCRIPTION": "Lose !M! Gold, Deal !D! Damage to all enemies"
   },
   "${modID}:HeadFirst": {
     "NAME": "Head First",

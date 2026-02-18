@@ -1,8 +1,7 @@
 package goldieLocks.cards.uncommon;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,23 +10,23 @@ import goldieLocks.cards.BaseCard;
 import goldieLocks.character.MyCharacter;
 import goldieLocks.util.CardStats;
 
-public class IronFist extends BaseCard {
+public class HandCannon extends BaseCard {
 
-    public static final String ID = makeID(IronFist.class.getSimpleName());
+    public static final String ID = makeID(HandCannon.class.getSimpleName());
 
     private static final int MAGIC = 8;
-    private static final int DAMAGE = 15;
-    private static final int UPG_DAMAGE = 5;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 2;
 
     private static final CardStats info = new CardStats(
             MyCharacter.Meta.CARD_COLOR,
             CardType.ATTACK,
             CardRarity.UNCOMMON,
-            CardTarget.ENEMY,
+            CardTarget.ALL_ENEMY,
             0
     );
 
-    public IronFist() {
+    public HandCannon() {
         super(ID, info);
 
         setMagic(MAGIC);
@@ -38,12 +37,12 @@ public class IronFist extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(p.gold >= MAGIC) {
             p.loseGold(MAGIC);
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            addToBot(new DamageAllEnemiesAction(p, this.multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new IronFist();
+        return new HandCannon();
     }
 }
